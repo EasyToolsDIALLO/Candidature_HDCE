@@ -14,10 +14,23 @@
             $nom= $row['nom'];
             $prenom= $row['prenom'];
             $categorie= $row['categorie_id'];
+            $categorie_nom="";
+
+            $connection->select("categorie","*");
+            $result_ = $connection->sql;
+            while($row_ = mysqli_fetch_assoc($result_)){
+                if($categorie==$row_['id']){
+                    $categorie_nom=$row_['categorie'];
+                    break;
+                }
+                    
+                
+            }
+
             $tbody .= "<tr data-toggle='modal' data-target='#myFicheModal' data-id='$id' data-name=$nom data-prenom=$prenom data-categorie=$categorie>
             <td>$nom</td>
             <td>$prenom</td>
-            <td>$categorie</td>
+            <td>$categorie_nom</td>
             </tr>";
         };
         echo $tbody;

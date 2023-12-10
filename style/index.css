@@ -5,6 +5,7 @@
 
 body{
     padding: 0% 10%;
+    background-color: #edede9;
 }
 
 
@@ -14,4 +15,5 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
 }
