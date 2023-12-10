@@ -1,0 +1,17 @@
+@import url('button.css');
+@import url('modal.css');
+@import url('table.css');
+@import url('fiche_contact.css');
+
+body{
+    padding: 0% 10%;
+}
+
+
+.header{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
